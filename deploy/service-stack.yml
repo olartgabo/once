@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Once public demo service - a single bounded App Runner instance serving only synthetic workflows.
+Metadata:
+  AWSToolsMetrics:
+    AWSAgentToolkit: aws-cloudformation@2
+  com.aws.cloudformation.Context:
+    ref:
+      - docs/DEPLOYMENT.md
+Parameters:
+  ImageUri:
+    Type: String
+    Description: Immutable ECR image URI with digest or build-specific tag.
+    AllowedPattern: '.+\.dkr\.ecr\.[a-z0-9-]+\.amazonaws\.com/.+:(?:[a-zA-Z0-9_.-]+)$'
+Resources:
+  ImageAccessRole:
+    Type: AWS::IAM::Role
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Lets App Runner pull the private image; the application receives no AWS API credentials.
+        must:
+          - Trust only the App Runner build service.
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: build.apprunner.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonAppRunnerServicePolicyForECRAccess
+  DemoScaling:
+    Type: AWS::AppRunner::AutoScalingConfiguration
+    Properties:
+      AutoScalingConfigurationName: !Sub "${AWS::StackName}-single-instance"
+      MaxConcurrency: 25
+      MaxSize: 1
+      MinSize: 1
+  DemoService:
+    Type: AWS::AppRunner::Service
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Public HTTPS endpoint for the synthetic judge demo; one instance keeps runs in one process.
+        must:
+          - Do not enable arbitrary URL automation.
+          - Keep max instance count at one until persistence is shared.
+    Properties:
+      ServiceName: !Sub "${AWS::StackName}-once"
+      AutoScalingConfigurationArn: !GetAtt DemoScaling.AutoScalingConfigurationArn
+      SourceConfiguration:
+        AutoDeploymentsEnabled: false
+        AuthenticationConfiguration:
+          AccessRoleArn: !GetAtt ImageAccessRole.Arn
+        ImageRepository:
+          ImageIdentifier: !Ref ImageUri
+          ImageRepositoryType: ECR
+          ImageConfiguration:
+            Port: "3001"
+            RuntimeEnvironmentVariables:
+              - Name: NODE_ENV
+                Value: production
+              - Name: ONCE_HOST
+                Value: 0.0.0.0
+              - Name: ONCE_PUBLIC_DEMO
+                Value: "1"
+              - Name: ONCE_WEB_ORIGIN
+                Value: http://127.0.0.1:3001
+      InstanceConfiguration:
+        Cpu: "1 vCPU"
+        Memory: "3 GB"
+      HealthCheckConfiguration:
+        Protocol: HTTP
+        Path: /api/health
+        Interval: 10
+        Timeout: 5
+        HealthyThreshold: 2
+        UnhealthyThreshold: 5
+Outputs:
+  PublicUrl:
+    Description: Public HTTPS judge URL.
+    Value: !Sub "https://${DemoService.ServiceUrl}"
+  ServiceArn:
+    Description: App Runner service ARN for operational checks.
+    Value: !GetAtt DemoService.ServiceArn

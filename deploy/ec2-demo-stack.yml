@@ -1,0 +1,215 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Once public demo - one Ubuntu browser host behind CloudFront HTTPS with origin access limited to CloudFront.
+Metadata:
+  AWSToolsMetrics:
+    AWSAgentToolkit: aws-cloudformation@2
+  com.aws.cloudformation.Context:
+    ref:
+      - docs/DEPLOYMENT.md
+Parameters:
+  SourceBucket:
+    Type: String
+    Description: Private bucket containing once-source.zip.
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+  SubnetId:
+    Type: AWS::EC2::Subnet::Id
+  CloudFrontPrefixListId:
+    Type: String
+    Description: Managed com.amazonaws.global.cloudfront.origin-facing prefix list in this Region.
+    AllowedPattern: "pl-[0-9a-f]+"
+  UbuntuAmi:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/canonical/ubuntu/server/24.04/stable/current/amd64/hvm/ebs-gp3/ami-id
+Resources:
+  OriginSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Allows the HTTP origin only from the AWS managed CloudFront origin network.
+        must:
+          - Never open the application port to the whole internet.
+    Properties:
+      GroupDescription: Once demo origin from CloudFront only
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 3001
+          ToPort: 3001
+          SourcePrefixListId: !Ref CloudFrontPrefixListId
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          CidrIp: 0.0.0.0/0
+  InstanceRole:
+    Type: AWS::IAM::Role
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Reads the private source archive and permits Session Manager troubleshooting without SSH.
+        must:
+          - Do not grant app-level Bedrock or AgentCore permissions to this local-mode host.
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      Policies:
+        - PolicyName: read-source
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: s3:GetObject
+                Resource: !Sub "arn:${AWS::Partition}:s3:::${SourceBucket}/once-source.zip"
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref InstanceRole
+  DemoInstance:
+    Type: AWS::EC2::Instance
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Runs the proven local browser adapter on AWS while Bedrock and AgentCore account access is blocked.
+        must:
+          - The site handles only synthetic Northstar scenarios.
+          - Keep a single instance until run state moves to shared persistence.
+    Properties:
+      ImageId: !Ref UbuntuAmi
+      InstanceType: t3.medium
+      IamInstanceProfile: !Ref InstanceProfile
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: "0"
+          GroupSet:
+            - !Ref OriginSecurityGroup
+          SubnetId: !Ref SubnetId
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeSize: 30
+            VolumeType: gp3
+            Encrypted: true
+            DeleteOnTermination: true
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          set -euxo pipefail
+          export DEBIAN_FRONTEND=noninteractive
+          apt-get update
+          apt-get install -y awscli unzip nodejs npm
+          mkdir -p /opt/once
+          aws s3 cp s3://${SourceBucket}/once-source.zip /tmp/once-source.zip --region ${AWS::Region}
+          unzip -q /tmp/once-source.zip -d /opt/once
+          cd /opt/once
+          npm ci
+          npm run build
+          npx playwright install-deps chromium
+          PLAYWRIGHT_BROWSERS_PATH=/opt/once/ms-playwright npx playwright install chromium
+          useradd --system --home /opt/once --shell /usr/sbin/nologin once
+          mkdir -p /opt/once/.data
+          chown -R once:once /opt/once
+          cat >/etc/systemd/system/once.service <<'UNIT'
+          [Unit]
+          Description=Once synthetic browser demo
+          After=network-online.target
+          Wants=network-online.target
+
+          [Service]
+          Type=simple
+          User=once
+          WorkingDirectory=/opt/once
+          Environment=NODE_ENV=production
+          Environment=PORT=3001
+          Environment=ONCE_HOST=0.0.0.0
+          Environment=ONCE_PUBLIC_DEMO=1
+          Environment=ONCE_WEB_ORIGIN=http://127.0.0.1:3001
+          Environment=PLAYWRIGHT_BROWSERS_PATH=/opt/once/ms-playwright
+          ExecStart=/usr/bin/node --import tsx server/index.ts
+          Restart=always
+          RestartSec=5
+
+          [Install]
+          WantedBy=multi-user.target
+          UNIT
+          systemctl daemon-reload
+          systemctl enable --now once
+  NoCache:
+    Type: AWS::CloudFront::CachePolicy
+    Properties:
+      CachePolicyConfig:
+        Name: !Sub "${AWS::StackName}-no-cache"
+        DefaultTTL: 0
+        MaxTTL: 0
+        MinTTL: 0
+        ParametersInCacheKeyAndForwardedToOrigin:
+          CookiesConfig:
+            CookieBehavior: none
+          HeadersConfig:
+            HeaderBehavior: none
+          QueryStringsConfig:
+            QueryStringBehavior: none
+          EnableAcceptEncodingBrotli: false
+          EnableAcceptEncodingGzip: false
+  ForwardRequest:
+    Type: AWS::CloudFront::OriginRequestPolicy
+    Properties:
+      OriginRequestPolicyConfig:
+        Name: !Sub "${AWS::StackName}-forward-request"
+        CookiesConfig:
+          CookieBehavior: all
+        HeadersConfig:
+          HeaderBehavior: allViewer
+        QueryStringsConfig:
+          QueryStringBehavior: all
+  DemoDistribution:
+    Type: AWS::CloudFront::Distribution
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Provides a public managed HTTPS domain while the only HTTP origin path stays on CloudFront networks.
+        must:
+          - Keep caching disabled for API responses and synthetic run evidence.
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        PriceClass: PriceClass_100
+        HttpVersion: http2
+        Origins:
+          - Id: once-origin
+            DomainName: !GetAtt DemoInstance.PublicDnsName
+            CustomOriginConfig:
+              HTTPPort: 3001
+              OriginProtocolPolicy: http-only
+        DefaultCacheBehavior:
+          TargetOriginId: once-origin
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+            - PUT
+            - PATCH
+            - POST
+            - DELETE
+          CachedMethods:
+            - GET
+            - HEAD
+          CachePolicyId: !Ref NoCache
+          OriginRequestPolicyId: !Ref ForwardRequest
+          Compress: true
+        ViewerCertificate:
+          CloudFrontDefaultCertificate: true
+Outputs:
+  PublicUrl:
+    Description: Public HTTPS judge URL.
+    Value: !Sub "https://${DemoDistribution.DomainName}"
+  InstanceId:
+    Description: Instance ID for Session Manager troubleshooting.
+    Value: !Ref DemoInstance
+  DistributionId:
+    Description: CloudFront distribution ID.
+    Value: !Ref DemoDistribution
