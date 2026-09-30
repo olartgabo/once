@@ -6,6 +6,8 @@ Once is a browser-workflow laboratory hosted on AWS. Record an invoice task in t
 
 The default mode uses a deterministic, invoice-specific compiler and local Playwright. Optional integrations now implement Amazon Bedrock intent enrichment and visible-target selection, plus AgentCore Browser execution with a scoped local fixture bridge. These integrations preserve the recorded action order; they do not train a model or infer a general policy. Live Nova inference is currently blocked: AWS reports `NOT_AUTHORIZED` and `ValidationException: Operation not allowed` for the configured account. See [the recording guide](docs/RECORDING.md) for the demo sequence and AWS launch settings.
 
+Watch the [narrated demo](https://github.com/olartgabo/once/releases/download/submission-narrated-20260930/once-narrated.mp4).
+
 Try the [live AWS demo](https://tpuqe8scax.us-east-1.awsapprunner.com), with no app login. The public demo uses synthetic data and ephemeral instance storage.
 
 ![Verified invoice run on the public AWS demo](docs/evidence/verified-live-run.png)

@@ -15,7 +15,15 @@ const context = await browser.newContext({
   recordVideo: { dir: videoDir, size: { width: 1600, height: 1000 } },
 });
 const page = await context.newPage();
+const recordingStart = Date.now();
+const markers: { text: string; timeMs: number }[] = [];
+const clean = process.env.ONCE_VIDEO_CLEAN === "1";
 const caption = async (text: string, seconds = 8) => {
+  markers.push({ text, timeMs: Date.now() - recordingStart });
+  if (clean) {
+    await page.waitForTimeout(seconds * 1000);
+    return;
+  }
   await page.evaluate((text) => {
     let el = document.getElementById("once-recording-caption");
     if (!el) {
@@ -178,11 +186,14 @@ try {
       {
         origin,
         health,
+        clean,
+        markers,
         recordedAt: new Date().toISOString(),
         workflow,
         runs: paired,
-        scope:
-          "Scripted real browser walkthrough with captions; no voiceover; no cuts.",
+        scope: clean
+          ? "Scripted real browser walkthrough without captions; real UI actions and verified outcomes."
+          : "Scripted real browser walkthrough with captions; no voiceover; no cuts.",
       },
       null,
       2,

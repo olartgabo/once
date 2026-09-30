@@ -1,0 +1,254 @@
+[
+  {
+    "text": "A browser workflow can work perfectly today and break tomorrow.",
+    "startMs": 2050,
+    "endMs": 6040,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "A button gets renamed, an element ID changes, and the",
+    "startMs": 6040,
+    "endMs": 9120,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "same recorded clicks suddenly stop working.",
+    "startMs": 9120,
+    "endMs": 11490,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "This is Once: show it once, run through change.",
+    "startMs": 11540,
+    "endMs": 15010,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "It lets you record a task, inspect the workflow, and",
+    "startMs": 15040,
+    "endMs": 17880,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "compare how two automation methods handle a changed interface.",
+    "startMs": 17880,
+    "endMs": 21510,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Here, I\u2019m recording an invoice in Northstar, our synthetic customer",
+    "startMs": 21540,
+    "endMs": 25240,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "workspace. I choose Globex Research, add two line items, and",
+    "startMs": 25240,
+    "endMs": 28870,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "set payment terms to Net fifteen.",
+    "startMs": 28870,
+    "endMs": 30840,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "The total is seventeen hundred dollars.",
+    "startMs": 30840,
+    "endMs": 33800,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Then I create the invoice and export its PDF.",
+    "startMs": 33800,
+    "endMs": 36470,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Once turns those recorded events into an inspectable workflow.",
+    "startMs": 36740,
+    "endMs": 40860,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "It preserves the demonstrated values and action order, along with",
+    "startMs": 40940,
+    "endMs": 44140,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "the original events behind each step.",
+    "startMs": 44140,
+    "endMs": 45880,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "You can see exactly what was captured and what will",
+    "startMs": 46100,
+    "endMs": 48670,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "run. Now we put that workflow through the mutation lab.",
+    "startMs": 48670,
+    "endMs": 51800,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "At level four, the interface has a different theme, changed",
+    "startMs": 51800,
+    "endMs": 54550,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "element IDs, rearranged navigation, and supported label substitutions.",
+    "startMs": 54550,
+    "endMs": 58360,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Both methods get a fresh scenario.",
+    "startMs": 58660,
+    "endMs": 60480,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Selector replay follows the original selectors.",
+    "startMs": 60480,
+    "endMs": 63770,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Semantic binding looks for visible controls using accessible roles and",
+    "startMs": 63770,
+    "endMs": 67760,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "predefined equivalent labels. In this run, selector replay fails, while",
+    "startMs": 67760,
+    "endMs": 72250,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "semantic binding completes the invoice.",
+    "startMs": 72250,
+    "endMs": 74690,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "The verifier checks six outcomes: exactly one invoice, the correct",
+    "startMs": 75000,
+    "endMs": 79160,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "customer, line items, payment terms, total, and PDF evidence.",
+    "startMs": 79160,
+    "endMs": 82960,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Screenshots and the downloaded PDF make the result inspectable.",
+    "startMs": 82960,
+    "endMs": 87200,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "We also ran thirty executions against the public AWS demo.",
+    "startMs": 87200,
+    "endMs": 90920,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Semantic binding passed fifteen out of fifteen.",
+    "startMs": 90920,
+    "endMs": 93870,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Selector replay passed six out of fifteen.",
+    "startMs": 93870,
+    "endMs": 96170,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "These results cover this controlled invoice fixture and its supported",
+    "startMs": 96170,
+    "endMs": 99760,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "changes. The app runs on AWS App Runner, with its",
+    "startMs": 99760,
+    "endMs": 104150,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "container stored in Amazon ECR and infrastructure managed through CloudFormation.",
+    "startMs": 104150,
+    "endMs": 110640,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "The demo uses Playwright Chromium and a deterministic compiler.",
+    "startMs": 110640,
+    "endMs": 114120,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Bedrock and AgentCore are optional integrations that remain unverified.",
+    "startMs": 114120,
+    "endMs": 119320,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Once makes browser automation easier to inspect, compare, and verify.",
+    "startMs": 119320,
+    "endMs": 124370,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Show it once. Run through change.",
+    "startMs": 124440,
+    "endMs": 126440,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

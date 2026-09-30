@@ -1,0 +1,51 @@
+{
+  "audioOffset": 2,
+  "duration": 129.3,
+  "scenes": [
+    {
+      "id": "problem",
+      "start": 0,
+      "end": 12.24,
+      "chapter": "01 / The problem"
+    },
+    {
+      "id": "intro",
+      "start": 12.24,
+      "end": 22.08,
+      "chapter": "02 / Meet Once"
+    },
+    { "id": "record", "start": 22.08, "end": 37.56, "chapter": "03 / Record" },
+    {
+      "id": "inspect",
+      "start": 37.56,
+      "end": 49.64,
+      "chapter": "04 / Inspect"
+    },
+    {
+      "id": "mutation",
+      "start": 49.64,
+      "end": 58.6,
+      "chapter": "05 / Change the interface"
+    },
+    { "id": "methods", "start": 58.6, "end": 70.84, "chapter": "06 / Compare" },
+    { "id": "verify", "start": 70.84, "end": 87.64, "chapter": "07 / Verify" },
+    {
+      "id": "benchmark",
+      "start": 87.64,
+      "end": 100.72,
+      "chapter": "08 / Measure"
+    },
+    {
+      "id": "architecture",
+      "start": 100.72,
+      "end": 119.56,
+      "chapter": "09 / AWS deployment"
+    },
+    {
+      "id": "outro",
+      "start": 119.56,
+      "end": 129.3,
+      "chapter": "Once / Show it once. Run through change."
+    }
+  ]
+}

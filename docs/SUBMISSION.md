@@ -9,7 +9,7 @@ Prepared project copy and evidence for the owner to publish on AWS Builder Cente
 - Focus track: **Community** (open-source developer experiment and verification tool)
 - Source: `https://github.com/olartgabo/once/tree/codex/once`
 - Verified live URL: `https://tpuqe8scax.us-east-1.awsapprunner.com`
-- Demo video: [captioned live AWS walkthrough](https://github.com/olartgabo/once/releases/download/submission-20260930/once-walkthrough.mp4).
+- Demo video: [narrated live AWS walkthrough](https://github.com/olartgabo/once/releases/download/submission-narrated-20260930/once-narrated.mp4).
 
 ## Project description
 
@@ -44,4 +44,4 @@ Independent local-container and public AWS benchmarks each used three seeds acro
 
 Official rules: [AWS Zero to Shipped](https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped?tab=rules), checked in a browser during this preparation. A live public AWS application and documented coding-agent connection are mandatory ship gates.
 
-Release downloads: [source archive](https://github.com/olartgabo/once/releases/download/submission-20260930/once-source.zip), [evidence archive](https://github.com/olartgabo/once/releases/download/submission-20260930/once-evidence.zip), [video](https://github.com/olartgabo/once/releases/download/submission-20260930/once-walkthrough.mp4). Builder Center publication itself has not been performed.
+Release downloads: [source archive](https://github.com/olartgabo/once/releases/download/submission-20260930/once-source.zip), [evidence archive](https://github.com/olartgabo/once/releases/download/submission-20260930/once-evidence.zip), [video](https://github.com/olartgabo/once/releases/download/submission-narrated-20260930/once-narrated.mp4). Builder Center publication itself has not been performed.
