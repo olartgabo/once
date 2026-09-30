@@ -47,6 +47,7 @@ import type {
 
 type View = "workflows" | "runs" | "lab" | "guide" | "settings";
 type RuntimeHealth = {
+  publicDemo: boolean;
   browser: "agentcore" | "local";
   cloud: boolean;
   compiler: string;
@@ -159,7 +160,9 @@ export default function App() {
     ? "Checking configuration"
     : remoteBrowser
       ? "AgentCore configured"
-      : "Local browser configured";
+      : health.publicDemo
+        ? "Public demo · Playwright"
+        : "Local browser configured";
   useEffect(() => {
     mounted.current = true;
     let cancelled = false;
@@ -384,7 +387,9 @@ export default function App() {
             <div className="avatar">Y</div>
             <div>
               <strong>Your workspace</strong>
-              <small>Local development</small>
+              <small>
+                {health?.publicDemo ? "Synthetic demo" : "Local development"}
+              </small>
             </div>
             <CircleHelp size={17} />
           </div>
@@ -646,7 +651,7 @@ export default function App() {
                         ))}
                         <span className="saved-indicator">
                           <CheckCheck size={14} />
-                          Saved locally
+                          Saved
                         </span>
                       </div>
                       {tab === "overview" ? (
@@ -1320,7 +1325,7 @@ export default function App() {
                         ? "Waiting for runtime configuration."
                         : remoteBrowser
                           ? "AgentCore runs the remote browser. A bounded, same-origin bridge serves the local Northstar fixture to that browser."
-                          : "Local Playwright browser. Executions run on this machine."}
+                          : "Playwright browser. Executions run on the application server."}
                     </p>
                   </div>
                   <span className="badge green">
@@ -1373,15 +1378,19 @@ export default function App() {
                     <h3>Evidence storage</h3>
                     <p>
                       Workflows, run results, screenshots, and PDFs are stored
-                      locally.
+                      on the application server.{" "}
+                      {health?.publicDemo
+                        ? "Demo history resets when the server is replaced."
+                        : "History persists in the local data directory."}
                     </p>
                   </div>
-                  <span className="badge green">On this machine</span>
+                  <span className="badge green">On the server</span>
                 </div>
               </section>
               <p className="settings-footnote">
-                Once is a local development workspace. Keep the control plane on
-                a trusted machine.
+                {health?.publicDemo
+                  ? "Public synthetic demo. Use the included fictional customers and sample data."
+                  : "Once is a local development workspace. Keep the control plane on a trusted machine."}
               </p>
             </>
           )}

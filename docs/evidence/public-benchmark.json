@@ -1,0 +1,5784 @@
+{
+  "startedAt": "2026-09-30T03:20:49.186Z",
+  "updatedAt": "2026-09-30T03:23:41.319Z",
+  "apiOrigin": "https://tpuqe8scax.us-east-1.awsapprunner.com",
+  "health": {
+    "publicDemo": true,
+    "browser": "local",
+    "cloud": false,
+    "compiler": "local-evidence-rules/1.0",
+    "model": null,
+    "region": "us-east-1"
+  },
+  "scope": "Synthetic invoice fixture; three seeds; fixed cumulative L0-L4 mutations; one execution per method/seed/level. Seeds change IDs only. No statistical generalization.",
+  "seeds": [
+    48219,
+    9042,
+    20260929
+  ],
+  "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+  "N": 30,
+  "unexpected": 0,
+  "runs": [
+    {
+      "id": "139d36d6-ffeb-4b67-964e-4b569778a3b7",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 48219,
+      "level": 0,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:20:49.232Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:20:49.235Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.148Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.220Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:50.222Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · #customer-acme",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.267Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:50.269Z",
+          "step": "step-3",
+          "message": "Activate Billing · #tab-billing",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.410Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/139d36d6-ffeb-4b67-964e-4b569778a3b7-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:20:50.411Z",
+          "step": "step-4",
+          "message": "Activate New invoice · #new-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.466Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:50.467Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · #description-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.482Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:50.483Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · #quantity-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.611Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/139d36d6-ffeb-4b67-964e-4b569778a3b7-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:20:50.614Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · #price-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.635Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:50.636Z",
+          "step": "step-8",
+          "message": "Activate Add line item · #add-item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.684Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:50.685Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · #description-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.849Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/139d36d6-ffeb-4b67-964e-4b569778a3b7-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:20:50.851Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · #quantity-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.866Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:50.889Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · #price-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:50.915Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:50.930Z",
+          "step": "step-12",
+          "message": "Set Payment terms · #payment-terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:51.066Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/139d36d6-ffeb-4b67-964e-4b569778a3b7-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:20:51.067Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · #save-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:51.121Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:51.124Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · #export-pdf",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:51.224Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:51.447Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/139d36d6-ffeb-4b67-964e-4b569778a3b7.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "83740227-0767-426a-837a-41f9c33e0425",
+      "screenshot": "/artifacts/139d36d6-ffeb-4b67-964e-4b569778a3b7.png",
+      "pdfUrl": "/artifacts/139d36d6-ffeb-4b67-964e-4b569778a3b7.pdf",
+      "finishedAt": "2026-09-30T03:20:51.447Z",
+      "durationMs": 2212
+    },
+    {
+      "id": "016bd26b-0798-4885-b7ce-dab58e6db55b",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 48219,
+      "level": 0,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:20:54.230Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:20:54.232Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.144Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.220Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.223Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.267Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.268Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.394Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/016bd26b-0798-4885-b7ce-dab58e6db55b-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:20:55.395Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.464Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.466Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.483Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.486Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.615Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/016bd26b-0798-4885-b7ce-dab58e6db55b-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:20:55.616Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.633Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.635Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.683Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.684Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.781Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/016bd26b-0798-4885-b7ce-dab58e6db55b-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:20:55.782Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.794Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.796Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.818Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.819Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.919Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/016bd26b-0798-4885-b7ce-dab58e6db55b-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:20:55.920Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:55.978Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:55.980Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:20:56.064Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:20:56.181Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/016bd26b-0798-4885-b7ce-dab58e6db55b.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "4a45599a-6916-431f-b55d-79f557ac2822",
+      "screenshot": "/artifacts/016bd26b-0798-4885-b7ce-dab58e6db55b.png",
+      "pdfUrl": "/artifacts/016bd26b-0798-4885-b7ce-dab58e6db55b.pdf",
+      "finishedAt": "2026-09-30T03:20:56.181Z",
+      "durationMs": 1949
+    },
+    {
+      "id": "112f5d2b-235e-421d-bf1a-18d6ce6e41f2",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 48219,
+      "level": 1,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:20:59.246Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:20:59.248Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.151Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.239Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:00.241Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · #customer-acme",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.288Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:00.289Z",
+          "step": "step-3",
+          "message": "Activate Billing · #tab-billing",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.413Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/112f5d2b-235e-421d-bf1a-18d6ce6e41f2-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:21:00.415Z",
+          "step": "step-4",
+          "message": "Activate New invoice · #new-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.460Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:00.465Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · #description-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.482Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:00.511Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · #quantity-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.619Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/112f5d2b-235e-421d-bf1a-18d6ce6e41f2-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:21:00.621Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · #price-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.635Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:00.637Z",
+          "step": "step-8",
+          "message": "Activate Add line item · #add-item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.685Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:00.686Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · #description-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.785Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/112f5d2b-235e-421d-bf1a-18d6ce6e41f2-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:21:00.786Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · #quantity-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.817Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:00.819Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · #price-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.831Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:00.854Z",
+          "step": "step-12",
+          "message": "Set Payment terms · #payment-terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:00.948Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/112f5d2b-235e-421d-bf1a-18d6ce6e41f2-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:21:00.949Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · #save-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:01.005Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:01.008Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · #export-pdf",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:01.089Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:01.275Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/112f5d2b-235e-421d-bf1a-18d6ce6e41f2.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "a7a98672-41ed-4ee1-acf8-6e32593347d6",
+      "screenshot": "/artifacts/112f5d2b-235e-421d-bf1a-18d6ce6e41f2.png",
+      "pdfUrl": "/artifacts/112f5d2b-235e-421d-bf1a-18d6ce6e41f2.pdf",
+      "finishedAt": "2026-09-30T03:21:01.275Z",
+      "durationMs": 2027
+    },
+    {
+      "id": "10fe5eba-8a8f-4133-83cd-ec013e9dee23",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 48219,
+      "level": 1,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:21:04.242Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:04.244Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.220Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.330Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:05.338Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.369Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:05.371Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.513Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/10fe5eba-8a8f-4133-83cd-ec013e9dee23-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:21:05.515Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.581Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:05.583Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.617Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:05.619Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.736Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/10fe5eba-8a8f-4133-83cd-ec013e9dee23-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:21:05.739Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.756Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:05.759Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.801Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:05.803Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.915Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/10fe5eba-8a8f-4133-83cd-ec013e9dee23-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:21:05.917Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.930Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:05.931Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:05.942Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:05.946Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:06.083Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/10fe5eba-8a8f-4133-83cd-ec013e9dee23-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:21:06.091Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:06.166Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:06.168Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:06.251Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:06.411Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/10fe5eba-8a8f-4133-83cd-ec013e9dee23.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "14ec22a0-b699-47f7-856e-ee25c4812e6e",
+      "screenshot": "/artifacts/10fe5eba-8a8f-4133-83cd-ec013e9dee23.png",
+      "pdfUrl": "/artifacts/10fe5eba-8a8f-4133-83cd-ec013e9dee23.pdf",
+      "finishedAt": "2026-09-30T03:21:06.411Z",
+      "durationMs": 2167
+    },
+    {
+      "id": "100c0b90-8d1a-4055-ba14-f1bad3db5224",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 48219,
+      "level": 2,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:21:09.299Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:09.301Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:10.239Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:14.741Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:21:14.887Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/100c0b90-8d1a-4055-ba14-f1bad3db5224.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "4063955a-eaf7-4f72-ac06-60b87d4d24c7",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/100c0b90-8d1a-4055-ba14-f1bad3db5224.png",
+      "finishedAt": "2026-09-30T03:21:14.887Z",
+      "durationMs": 5586
+    },
+    {
+      "id": "971f08ba-1cea-48bb-b08e-908599b0fa05",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 48219,
+      "level": 2,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:21:16.069Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:16.071Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.017Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.131Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.133Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.166Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.167Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.294Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/971f08ba-1cea-48bb-b08e-908599b0fa05-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:21:17.296Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.363Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.365Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.384Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.386Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.512Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/971f08ba-1cea-48bb-b08e-908599b0fa05-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:21:17.515Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.531Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.533Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.583Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.584Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.683Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/971f08ba-1cea-48bb-b08e-908599b0fa05-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:21:17.685Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.697Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.711Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.726Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.728Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.837Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/971f08ba-1cea-48bb-b08e-908599b0fa05-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:21:17.840Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.893Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:17.896Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:17.978Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:18.117Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/971f08ba-1cea-48bb-b08e-908599b0fa05.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "9196e54a-ac10-4247-80e4-a917150e8204",
+      "screenshot": "/artifacts/971f08ba-1cea-48bb-b08e-908599b0fa05.png",
+      "pdfUrl": "/artifacts/971f08ba-1cea-48bb-b08e-908599b0fa05.pdf",
+      "finishedAt": "2026-09-30T03:21:18.117Z",
+      "durationMs": 2046
+    },
+    {
+      "id": "ede62a95-3837-4753-8643-0f9ca1540788",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 48219,
+      "level": 3,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:21:21.088Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:21.090Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:22.045Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:26.547Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:21:26.696Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/ede62a95-3837-4753-8643-0f9ca1540788.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "ee893864-623c-4e51-86a7-7637a5907491",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/ede62a95-3837-4753-8643-0f9ca1540788.png",
+      "finishedAt": "2026-09-30T03:21:26.696Z",
+      "durationMs": 5606
+    },
+    {
+      "id": "d0aed383-77ef-45a0-9c6f-62847e52ab28",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 48219,
+      "level": 3,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:21:27.771Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:27.773Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:28.680Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:28.753Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:28.754Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:28.800Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:28.802Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:28.929Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/d0aed383-77ef-45a0-9c6f-62847e52ab28-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:21:28.931Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:28.993Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:28.997Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.019Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:29.024Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.137Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/d0aed383-77ef-45a0-9c6f-62847e52ab28-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:21:29.139Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.153Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:29.154Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.198Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:29.200Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.314Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/d0aed383-77ef-45a0-9c6f-62847e52ab28-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:21:29.318Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.332Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:29.333Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.347Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:29.349Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.448Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/d0aed383-77ef-45a0-9c6f-62847e52ab28-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:21:29.449Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.503Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:29.510Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:29.594Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:29.811Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/d0aed383-77ef-45a0-9c6f-62847e52ab28.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "d3482199-33cc-4e82-96ef-d1248eae8ee4",
+      "screenshot": "/artifacts/d0aed383-77ef-45a0-9c6f-62847e52ab28.png",
+      "pdfUrl": "/artifacts/d0aed383-77ef-45a0-9c6f-62847e52ab28.pdf",
+      "finishedAt": "2026-09-30T03:21:29.811Z",
+      "durationMs": 2038
+    },
+    {
+      "id": "c42e1b65-902e-455f-9f76-4124e8838c8e",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 48219,
+      "level": 4,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:21:32.787Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:32.790Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:33.740Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:38.249Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:21:38.396Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/c42e1b65-902e-455f-9f76-4124e8838c8e.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "c780b760-fbda-42bc-bb0e-a31c42863f55",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/c42e1b65-902e-455f-9f76-4124e8838c8e.png",
+      "finishedAt": "2026-09-30T03:21:38.396Z",
+      "durationMs": 5606
+    },
+    {
+      "id": "db00a919-1f78-4110-a5c7-a808dd594642",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 48219,
+      "level": 4,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:21:39.648Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:39.651Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:40.550Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:40.620Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:40.622Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:40.665Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:40.667Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:40.797Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/db00a919-1f78-4110-a5c7-a808dd594642-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:21:40.798Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:40.860Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:40.862Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:40.883Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:40.886Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.015Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/db00a919-1f78-4110-a5c7-a808dd594642-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:21:41.017Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.031Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:41.034Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.064Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:41.066Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.178Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/db00a919-1f78-4110-a5c7-a808dd594642-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:21:41.180Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.215Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:41.218Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.230Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:41.232Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.348Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/db00a919-1f78-4110-a5c7-a808dd594642-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:21:41.350Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.404Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:41.407Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:41.496Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:41.625Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/db00a919-1f78-4110-a5c7-a808dd594642.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "42cd2284-081a-4132-a63e-ddeb897ce135",
+      "screenshot": "/artifacts/db00a919-1f78-4110-a5c7-a808dd594642.png",
+      "pdfUrl": "/artifacts/db00a919-1f78-4110-a5c7-a808dd594642.pdf",
+      "finishedAt": "2026-09-30T03:21:41.625Z",
+      "durationMs": 1975
+    },
+    {
+      "id": "c3ae6e2f-ee9c-4b91-b70b-05c31b8eba63",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 9042,
+      "level": 0,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:21:44.646Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:44.648Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:45.549Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:45.619Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:45.620Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · #customer-acme",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:45.665Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:45.667Z",
+          "step": "step-3",
+          "message": "Activate Billing · #tab-billing",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:45.793Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/c3ae6e2f-ee9c-4b91-b70b-05c31b8eba63-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:21:45.794Z",
+          "step": "step-4",
+          "message": "Activate New invoice · #new-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:45.864Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:45.865Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · #description-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:45.881Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:45.883Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · #quantity-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:45.993Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/c3ae6e2f-ee9c-4b91-b70b-05c31b8eba63-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:21:46.010Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · #price-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:46.027Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:46.029Z",
+          "step": "step-8",
+          "message": "Activate Add line item · #add-item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:46.064Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:46.066Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · #description-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:46.179Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/c3ae6e2f-ee9c-4b91-b70b-05c31b8eba63-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:21:46.181Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · #quantity-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:46.195Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:46.197Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · #price-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:46.221Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:46.225Z",
+          "step": "step-12",
+          "message": "Set Payment terms · #payment-terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:46.324Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/c3ae6e2f-ee9c-4b91-b70b-05c31b8eba63-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:21:46.327Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · #save-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:46.375Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:46.381Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · #export-pdf",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:46.459Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:46.586Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/c3ae6e2f-ee9c-4b91-b70b-05c31b8eba63.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "33c3ba60-9e7c-442f-8ed8-cdc847917fdf",
+      "screenshot": "/artifacts/c3ae6e2f-ee9c-4b91-b70b-05c31b8eba63.png",
+      "pdfUrl": "/artifacts/c3ae6e2f-ee9c-4b91-b70b-05c31b8eba63.pdf",
+      "finishedAt": "2026-09-30T03:21:46.586Z",
+      "durationMs": 1938
+    },
+    {
+      "id": "1339f3f6-1d9d-4d11-b6ec-ad2dbe8f0e6c",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 9042,
+      "level": 0,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:21:49.649Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:49.652Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:50.572Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:50.652Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:50.659Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:50.701Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:50.702Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:50.911Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/1339f3f6-1d9d-4d11-b6ec-ad2dbe8f0e6c-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:21:50.914Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.029Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:51.032Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.049Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:51.051Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.150Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/1339f3f6-1d9d-4d11-b6ec-ad2dbe8f0e6c-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:21:51.152Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.167Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:51.169Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.214Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:51.216Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.315Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/1339f3f6-1d9d-4d11-b6ec-ad2dbe8f0e6c-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:21:51.317Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.330Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:51.332Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.346Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:51.348Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.451Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/1339f3f6-1d9d-4d11-b6ec-ad2dbe8f0e6c-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:21:51.453Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.515Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:51.517Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:51.612Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:51.776Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/1339f3f6-1d9d-4d11-b6ec-ad2dbe8f0e6c.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "346b4f20-fd53-46c5-af5d-f093158b84b4",
+      "screenshot": "/artifacts/1339f3f6-1d9d-4d11-b6ec-ad2dbe8f0e6c.png",
+      "pdfUrl": "/artifacts/1339f3f6-1d9d-4d11-b6ec-ad2dbe8f0e6c.pdf",
+      "finishedAt": "2026-09-30T03:21:51.776Z",
+      "durationMs": 2125
+    },
+    {
+      "id": "0d419cbd-0c7c-4337-a211-1f8e5b8f71c8",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 9042,
+      "level": 1,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:21:54.646Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:54.648Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:55.557Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:55.636Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:55.639Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · #customer-acme",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:55.681Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:55.683Z",
+          "step": "step-3",
+          "message": "Activate Billing · #tab-billing",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:55.812Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/0d419cbd-0c7c-4337-a211-1f8e5b8f71c8-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:21:55.814Z",
+          "step": "step-4",
+          "message": "Activate New invoice · #new-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:55.876Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:55.878Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · #description-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:55.894Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:55.896Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · #quantity-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.017Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/0d419cbd-0c7c-4337-a211-1f8e5b8f71c8-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:21:56.018Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · #price-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.033Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:56.035Z",
+          "step": "step-8",
+          "message": "Activate Add line item · #add-item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.082Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:56.083Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · #description-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.178Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/0d419cbd-0c7c-4337-a211-1f8e5b8f71c8-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:21:56.180Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · #quantity-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.193Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:56.210Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · #price-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.224Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:56.226Z",
+          "step": "step-12",
+          "message": "Set Payment terms · #payment-terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.334Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/0d419cbd-0c7c-4337-a211-1f8e5b8f71c8-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:21:56.337Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · #save-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.367Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:56.371Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · #export-pdf",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:21:56.472Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:21:56.637Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/0d419cbd-0c7c-4337-a211-1f8e5b8f71c8.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "cb0efa3b-b644-4876-a5d9-cec8f3a679b7",
+      "screenshot": "/artifacts/0d419cbd-0c7c-4337-a211-1f8e5b8f71c8.png",
+      "pdfUrl": "/artifacts/0d419cbd-0c7c-4337-a211-1f8e5b8f71c8.pdf",
+      "finishedAt": "2026-09-30T03:21:56.637Z",
+      "durationMs": 1989
+    },
+    {
+      "id": "5a2a9b2e-2c44-4016-a0f1-b04975d5a869",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 9042,
+      "level": 1,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:21:59.663Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:21:59.665Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:00.616Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:00.684Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:00.687Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:00.729Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:00.732Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:00.860Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/5a2a9b2e-2c44-4016-a0f1-b04975d5a869-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:22:00.862Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:00.929Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:00.931Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:00.949Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:00.952Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:01.077Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/5a2a9b2e-2c44-4016-a0f1-b04975d5a869-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:22:01.079Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:01.111Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:01.117Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:01.166Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:01.170Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:01.381Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/5a2a9b2e-2c44-4016-a0f1-b04975d5a869-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:22:01.385Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:01.407Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:01.418Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:01.437Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:01.465Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:01.940Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/5a2a9b2e-2c44-4016-a0f1-b04975d5a869-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:22:01.953Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:02.080Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:02.092Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:02.230Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:02.694Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/5a2a9b2e-2c44-4016-a0f1-b04975d5a869.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "67a1c58c-6888-4472-b64d-779291bf60c1",
+      "screenshot": "/artifacts/5a2a9b2e-2c44-4016-a0f1-b04975d5a869.png",
+      "pdfUrl": "/artifacts/5a2a9b2e-2c44-4016-a0f1-b04975d5a869.pdf",
+      "finishedAt": "2026-09-30T03:22:02.691Z",
+      "durationMs": 3028
+    },
+    {
+      "id": "8400b812-2ac9-4f60-b1eb-70bc0160095d",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 9042,
+      "level": 2,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:22:05.204Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:05.210Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:06.176Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:10.678Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:22:10.866Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/8400b812-2ac9-4f60-b1eb-70bc0160095d.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "6ba4a992-90bb-49d1-80a2-e68953a0c7c9",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/8400b812-2ac9-4f60-b1eb-70bc0160095d.png",
+      "finishedAt": "2026-09-30T03:22:10.866Z",
+      "durationMs": 5656
+    },
+    {
+      "id": "01d89f42-2da5-46e0-8cda-2440c9a57188",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 9042,
+      "level": 2,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:22:11.925Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:11.927Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:12.855Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:13.010Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:13.111Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:14.511Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:14.611Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:16.911Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/01d89f42-2da5-46e0-8cda-2440c9a57188-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:22:16.913Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.016Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:18.018Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.036Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:18.042Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.163Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/01d89f42-2da5-46e0-8cda-2440c9a57188-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:22:18.165Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.182Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:18.184Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.232Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:18.234Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.348Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/01d89f42-2da5-46e0-8cda-2440c9a57188-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:22:18.350Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.364Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:18.366Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.381Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:18.426Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.648Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/01d89f42-2da5-46e0-8cda-2440c9a57188-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:22:18.651Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.712Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:18.715Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:18.810Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:18.966Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/01d89f42-2da5-46e0-8cda-2440c9a57188.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "11b6e68b-6bac-4e75-9c57-09110eedda75",
+      "screenshot": "/artifacts/01d89f42-2da5-46e0-8cda-2440c9a57188.png",
+      "pdfUrl": "/artifacts/01d89f42-2da5-46e0-8cda-2440c9a57188.pdf",
+      "finishedAt": "2026-09-30T03:22:18.966Z",
+      "durationMs": 7039
+    },
+    {
+      "id": "1e31f666-55c1-43c2-9b20-e918c02ae684",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 9042,
+      "level": 3,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:22:21.566Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:21.568Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:22.477Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:26.979Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:22:27.123Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/1e31f666-55c1-43c2-9b20-e918c02ae684.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "3e181edd-bb9e-4222-bafe-09c469b8b2d4",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/1e31f666-55c1-43c2-9b20-e918c02ae684.png",
+      "finishedAt": "2026-09-30T03:22:27.123Z",
+      "durationMs": 5555
+    },
+    {
+      "id": "b36a5112-5343-4bc3-a20c-12a749e669d9",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 9042,
+      "level": 3,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:22:28.303Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:28.306Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.235Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.299Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:29.302Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.346Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:29.348Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.474Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/b36a5112-5343-4bc3-a20c-12a749e669d9-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:22:29.476Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.546Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:29.548Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.571Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:29.574Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.692Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/b36a5112-5343-4bc3-a20c-12a749e669d9-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:22:29.694Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.719Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:29.724Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.761Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:29.764Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.860Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/b36a5112-5343-4bc3-a20c-12a749e669d9-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:22:29.862Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.877Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:29.879Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:29.917Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:29.922Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:30.021Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/b36a5112-5343-4bc3-a20c-12a749e669d9-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:22:30.024Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:30.071Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:30.075Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:30.175Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:30.324Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/b36a5112-5343-4bc3-a20c-12a749e669d9.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "2cc594d9-8ccb-4150-bb6e-93bdbf39aa78",
+      "screenshot": "/artifacts/b36a5112-5343-4bc3-a20c-12a749e669d9.png",
+      "pdfUrl": "/artifacts/b36a5112-5343-4bc3-a20c-12a749e669d9.pdf",
+      "finishedAt": "2026-09-30T03:22:30.324Z",
+      "durationMs": 2018
+    },
+    {
+      "id": "004c07f7-317b-4dfc-8af8-104968f7d2f9",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 9042,
+      "level": 4,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:22:33.313Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:33.316Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:34.231Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:38.735Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:22:38.856Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/004c07f7-317b-4dfc-8af8-104968f7d2f9.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "d7744cd8-d11a-46ec-bb10-5eb3af0f02e5",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/004c07f7-317b-4dfc-8af8-104968f7d2f9.png",
+      "finishedAt": "2026-09-30T03:22:38.856Z",
+      "durationMs": 5540
+    },
+    {
+      "id": "5dfcafc4-bcf7-4061-83f6-e56adfc53d5d",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 9042,
+      "level": 4,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:22:40.037Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:40.039Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:40.942Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.017Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.020Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.064Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.066Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.190Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/5dfcafc4-bcf7-4061-83f6-e56adfc53d5d-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:22:41.192Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.262Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.265Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.319Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.325Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.439Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/5dfcafc4-bcf7-4061-83f6-e56adfc53d5d-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:22:41.441Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.456Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.460Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.495Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.497Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.618Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/5dfcafc4-bcf7-4061-83f6-e56adfc53d5d-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:22:41.620Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.631Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.634Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.648Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.650Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.752Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/5dfcafc4-bcf7-4061-83f6-e56adfc53d5d-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:22:41.755Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.815Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:41.820Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:41.911Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:42.076Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/5dfcafc4-bcf7-4061-83f6-e56adfc53d5d.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "59032008-aaf6-4360-ba39-ac10a470b148",
+      "screenshot": "/artifacts/5dfcafc4-bcf7-4061-83f6-e56adfc53d5d.png",
+      "pdfUrl": "/artifacts/5dfcafc4-bcf7-4061-83f6-e56adfc53d5d.pdf",
+      "finishedAt": "2026-09-30T03:22:42.076Z",
+      "durationMs": 2037
+    },
+    {
+      "id": "0423ee1e-5b4c-4f6b-9254-4c524e0b4916",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 20260929,
+      "level": 0,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:22:45.054Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:45.057Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:45.964Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.032Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.035Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · #customer-acme",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.108Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.110Z",
+          "step": "step-3",
+          "message": "Activate Billing · #tab-billing",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.224Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/0423ee1e-5b4c-4f6b-9254-4c524e0b4916-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:22:46.226Z",
+          "step": "step-4",
+          "message": "Activate New invoice · #new-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.293Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.295Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · #description-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.318Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.320Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · #quantity-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.428Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/0423ee1e-5b4c-4f6b-9254-4c524e0b4916-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:22:46.431Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · #price-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.445Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.448Z",
+          "step": "step-8",
+          "message": "Activate Add line item · #add-item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.495Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.497Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · #description-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.596Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/0423ee1e-5b4c-4f6b-9254-4c524e0b4916-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:22:46.599Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · #quantity-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.624Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.626Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · #price-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.640Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.642Z",
+          "step": "step-12",
+          "message": "Set Payment terms · #payment-terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.748Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/0423ee1e-5b4c-4f6b-9254-4c524e0b4916-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:22:46.752Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · #save-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.800Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:46.806Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · #export-pdf",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:46.884Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:47.055Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/0423ee1e-5b4c-4f6b-9254-4c524e0b4916.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "40fa1133-e197-44bd-8ce4-ace50507a59d",
+      "screenshot": "/artifacts/0423ee1e-5b4c-4f6b-9254-4c524e0b4916.png",
+      "pdfUrl": "/artifacts/0423ee1e-5b4c-4f6b-9254-4c524e0b4916.pdf",
+      "finishedAt": "2026-09-30T03:22:47.055Z",
+      "durationMs": 1998
+    },
+    {
+      "id": "1814115c-4020-47c1-9f9c-b71d40edacd2",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 20260929,
+      "level": 0,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:22:50.060Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:50.063Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:50.976Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.048Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.051Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.096Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.098Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.223Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/1814115c-4020-47c1-9f9c-b71d40edacd2-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:22:51.225Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.296Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.299Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.321Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.326Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.430Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/1814115c-4020-47c1-9f9c-b71d40edacd2-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:22:51.432Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.447Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.449Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.494Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.496Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.594Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/1814115c-4020-47c1-9f9c-b71d40edacd2-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:22:51.610Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.624Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.626Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.640Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.642Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.748Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/1814115c-4020-47c1-9f9c-b71d40edacd2-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:22:51.751Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.806Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:51.809Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:51.890Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:52.056Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/1814115c-4020-47c1-9f9c-b71d40edacd2.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "18bb9ef6-fef7-4560-891f-f675006d5fe4",
+      "screenshot": "/artifacts/1814115c-4020-47c1-9f9c-b71d40edacd2.png",
+      "pdfUrl": "/artifacts/1814115c-4020-47c1-9f9c-b71d40edacd2.pdf",
+      "finishedAt": "2026-09-30T03:22:52.056Z",
+      "durationMs": 1993
+    },
+    {
+      "id": "aef6468d-bf72-4738-ba77-f6f8d6e0267a",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 20260929,
+      "level": 1,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:22:55.059Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:22:55.061Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:55.960Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.031Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.034Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · #customer-acme",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.078Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.081Z",
+          "step": "step-3",
+          "message": "Activate Billing · #tab-billing",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.211Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/aef6468d-bf72-4738-ba77-f6f8d6e0267a-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:22:56.213Z",
+          "step": "step-4",
+          "message": "Activate New invoice · #new-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.271Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.274Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · #description-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.310Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.313Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · #quantity-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.418Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/aef6468d-bf72-4738-ba77-f6f8d6e0267a-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:22:56.422Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · #price-0",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.434Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.438Z",
+          "step": "step-8",
+          "message": "Activate Add line item · #add-item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.477Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.480Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · #description-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.575Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/aef6468d-bf72-4738-ba77-f6f8d6e0267a-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:22:56.577Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · #quantity-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.614Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.616Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · #price-1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.628Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.631Z",
+          "step": "step-12",
+          "message": "Set Payment terms · #payment-terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.735Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/aef6468d-bf72-4738-ba77-f6f8d6e0267a-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:22:56.738Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · #save-invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.784Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:56.790Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · #export-pdf",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:22:56.872Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:22:57.026Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/aef6468d-bf72-4738-ba77-f6f8d6e0267a.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "f5330669-d218-40e4-9eff-9d6a75849717",
+      "screenshot": "/artifacts/aef6468d-bf72-4738-ba77-f6f8d6e0267a.png",
+      "pdfUrl": "/artifacts/aef6468d-bf72-4738-ba77-f6f8d6e0267a.pdf",
+      "finishedAt": "2026-09-30T03:22:57.026Z",
+      "durationMs": 1965
+    },
+    {
+      "id": "682e556c-871b-449b-ab57-63472dfeb545",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 20260929,
+      "level": 1,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:23:00.060Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:23:00.068Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:01.042Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:01.116Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:01.119Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:01.189Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:01.193Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:01.374Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/682e556c-871b-449b-ab57-63472dfeb545-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:23:01.387Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:01.598Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:01.609Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:01.678Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:01.688Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:02.352Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/682e556c-871b-449b-ab57-63472dfeb545-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:23:02.376Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:02.477Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:02.490Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:02.631Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:02.659Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:02.992Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/682e556c-871b-449b-ab57-63472dfeb545-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:23:02.996Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:03.044Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:03.069Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:03.151Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:03.157Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:03.362Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/682e556c-871b-449b-ab57-63472dfeb545-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:23:03.365Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:03.468Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:03.483Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:03.647Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:03.913Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/682e556c-871b-449b-ab57-63472dfeb545.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "f9a8ce81-b09e-4087-9061-452d55e8fef2",
+      "screenshot": "/artifacts/682e556c-871b-449b-ab57-63472dfeb545.png",
+      "pdfUrl": "/artifacts/682e556c-871b-449b-ab57-63472dfeb545.pdf",
+      "finishedAt": "2026-09-30T03:23:03.913Z",
+      "durationMs": 3845
+    },
+    {
+      "id": "8c42481c-3715-4096-97f5-05eefa389708",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 20260929,
+      "level": 2,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:23:06.239Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:23:06.242Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:07.189Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:11.693Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:23:11.856Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/8c42481c-3715-4096-97f5-05eefa389708.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "c6173eee-4846-4dcb-ade4-9d1f8dd3a862",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/8c42481c-3715-4096-97f5-05eefa389708.png",
+      "finishedAt": "2026-09-30T03:23:11.856Z",
+      "durationMs": 5614
+    },
+    {
+      "id": "a2ca3792-3db5-4b11-8f9f-d83db6c8e61e",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 20260929,
+      "level": 2,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:23:13.302Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:23:13.304Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.245Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.315Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:14.319Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.362Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:14.365Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.490Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/a2ca3792-3db5-4b11-8f9f-d83db6c8e61e-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:23:14.492Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.559Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:14.562Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.582Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:14.585Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.711Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/a2ca3792-3db5-4b11-8f9f-d83db6c8e61e-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:23:14.713Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.729Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:14.732Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.777Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:14.780Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.875Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/a2ca3792-3db5-4b11-8f9f-d83db6c8e61e-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:23:14.877Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.892Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:14.894Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:14.923Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:14.925Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:15.022Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/a2ca3792-3db5-4b11-8f9f-d83db6c8e61e-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:23:15.025Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:15.072Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:15.080Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:15.152Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:15.311Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/a2ca3792-3db5-4b11-8f9f-d83db6c8e61e.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "a09e9e4f-fb8c-4cc8-85f8-a0a5714d7713",
+      "screenshot": "/artifacts/a2ca3792-3db5-4b11-8f9f-d83db6c8e61e.png",
+      "pdfUrl": "/artifacts/a2ca3792-3db5-4b11-8f9f-d83db6c8e61e.pdf",
+      "finishedAt": "2026-09-30T03:23:15.311Z",
+      "durationMs": 2007
+    },
+    {
+      "id": "badc8900-503c-4729-9f54-6db3c3ca153c",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 20260929,
+      "level": 3,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:23:18.396Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:23:18.399Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:19.340Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:23.843Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:23:23.987Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/badc8900-503c-4729-9f54-6db3c3ca153c.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "e57d2156-f0bb-41b5-9d7f-a78bf4bcdb39",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/badc8900-503c-4729-9f54-6db3c3ca153c.png",
+      "finishedAt": "2026-09-30T03:23:23.987Z",
+      "durationMs": 5588
+    },
+    {
+      "id": "574d12d7-7461-4377-b07f-ce2c74782ad5",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 20260929,
+      "level": 3,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:23:25.063Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:23:25.066Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.021Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.097Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.101Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.144Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.147Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.273Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/574d12d7-7461-4377-b07f-ce2c74782ad5-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:23:26.276Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.352Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.367Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.390Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.395Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.512Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/574d12d7-7461-4377-b07f-ce2c74782ad5-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:23:26.514Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.531Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.536Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.577Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.580Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.690Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/574d12d7-7461-4377-b07f-ce2c74782ad5-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:23:26.692Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.724Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.727Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.742Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.745Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.847Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/574d12d7-7461-4377-b07f-ce2c74782ad5-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:23:26.850Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:26.904Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:26.917Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:27.012Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:27.132Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/574d12d7-7461-4377-b07f-ce2c74782ad5.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "a8922c09-de18-4c4e-b6e1-e20576370b1c",
+      "screenshot": "/artifacts/574d12d7-7461-4377-b07f-ce2c74782ad5.png",
+      "pdfUrl": "/artifacts/574d12d7-7461-4377-b07f-ce2c74782ad5.pdf",
+      "finishedAt": "2026-09-30T03:23:27.132Z",
+      "durationMs": 2066
+    },
+    {
+      "id": "a202984b-f090-472e-aee4-63535588290b",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "literal",
+      "seed": 20260929,
+      "level": 4,
+      "status": "failed",
+      "startedAt": "2026-09-30T03:23:30.061Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:23:30.064Z",
+          "step": "session",
+          "message": "Starting isolated local browser · literal execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:31.016Z",
+          "step": "step-1",
+          "message": "Activate Customers · #nav-customers",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:35.518Z",
+          "step": "execution",
+          "message": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+          "status": "failed"
+        },
+        {
+          "time": "2026-09-30T03:23:35.633Z",
+          "step": "verification",
+          "message": "0/6 independent checks passed",
+          "status": "failed",
+          "screenshot": "/artifacts/a202984b-f090-472e-aee4-63535588290b.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "0",
+          "passed": false
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "Missing",
+          "passed": false
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Not verified",
+          "passed": false
+        }
+      ],
+      "scenarioId": "bc55168f-ea39-4e7c-8ada-ccd3818b31f3",
+      "error": "locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for locator('#nav-customers')\n",
+      "screenshot": "/artifacts/a202984b-f090-472e-aee4-63535588290b.png",
+      "finishedAt": "2026-09-30T03:23:35.633Z",
+      "durationMs": 5569
+    },
+    {
+      "id": "8b215359-f521-4301-bf86-9f9641af5471",
+      "workflowId": "53f58cfe-b847-4e4e-a435-d98014276480",
+      "workflowName": "Create & export customer invoice",
+      "mode": "semantic",
+      "seed": 20260929,
+      "level": 4,
+      "status": "passed",
+      "startedAt": "2026-09-30T03:23:37.061Z",
+      "events": [
+        {
+          "time": "2026-09-30T03:23:37.065Z",
+          "step": "session",
+          "message": "Starting isolated local browser · semantic execution",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.017Z",
+          "step": "step-1",
+          "message": "Activate Customers · visible button / Customers | Clients | Accounts",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.101Z",
+          "step": "step-1",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.105Z",
+          "step": "step-2",
+          "message": "Activate Acme Robotics · visible button / Acme Robotics",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.145Z",
+          "step": "step-2",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.148Z",
+          "step": "step-3",
+          "message": "Activate Billing · visible button / Billing | Invoices | Payments",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.281Z",
+          "step": "step-3",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/8b215359-f521-4301-bf86-9f9641af5471-step-3.png"
+        },
+        {
+          "time": "2026-09-30T03:23:38.284Z",
+          "step": "step-4",
+          "message": "Activate New invoice · visible button / New invoice | Draft invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.350Z",
+          "step": "step-4",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.353Z",
+          "step": "step-5",
+          "message": "Enter Description 1 · visible textbox / Description 1 | Details 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.372Z",
+          "step": "step-5",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.377Z",
+          "step": "step-6",
+          "message": "Enter Quantity 1 · visible spinbutton / Quantity 1 | Units 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.512Z",
+          "step": "step-6",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/8b215359-f521-4301-bf86-9f9641af5471-step-6.png"
+        },
+        {
+          "time": "2026-09-30T03:23:38.515Z",
+          "step": "step-7",
+          "message": "Enter Unit price 1 · visible spinbutton / Unit price 1 | Rate 1",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.533Z",
+          "step": "step-7",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.537Z",
+          "step": "step-8",
+          "message": "Activate Add line item · visible button / Add line item | Add item | Add another item",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.576Z",
+          "step": "step-8",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.579Z",
+          "step": "step-9",
+          "message": "Enter Description 2 · visible textbox / Description 2 | Details 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.674Z",
+          "step": "step-9",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/8b215359-f521-4301-bf86-9f9641af5471-step-9.png"
+        },
+        {
+          "time": "2026-09-30T03:23:38.676Z",
+          "step": "step-10",
+          "message": "Enter Quantity 2 · visible spinbutton / Quantity 2 | Units 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.713Z",
+          "step": "step-10",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.717Z",
+          "step": "step-11",
+          "message": "Enter Unit price 2 · visible spinbutton / Unit price 2 | Rate 2",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.730Z",
+          "step": "step-11",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.733Z",
+          "step": "step-12",
+          "message": "Set Payment terms · visible combobox / Payment terms | Due terms",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.838Z",
+          "step": "step-12",
+          "message": "Browser action completed",
+          "status": "passed",
+          "screenshot": "/artifacts/8b215359-f521-4301-bf86-9f9641af5471-step-12.png"
+        },
+        {
+          "time": "2026-09-30T03:23:38.842Z",
+          "step": "step-13",
+          "message": "Activate Create invoice · visible button / Create invoice | Issue invoice",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.889Z",
+          "step": "step-13",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:38.893Z",
+          "step": "step-14",
+          "message": "Activate Export PDF · visible button / Export PDF | Download PDF",
+          "status": "running"
+        },
+        {
+          "time": "2026-09-30T03:23:38.972Z",
+          "step": "step-14",
+          "message": "Browser action completed",
+          "status": "passed"
+        },
+        {
+          "time": "2026-09-30T03:23:39.122Z",
+          "step": "verification",
+          "message": "6/6 independent checks passed",
+          "status": "passed",
+          "screenshot": "/artifacts/8b215359-f521-4301-bf86-9f9641af5471.png"
+        }
+      ],
+      "checks": [
+        {
+          "label": "Exactly one invoice",
+          "expected": "1",
+          "actual": "1",
+          "passed": true
+        },
+        {
+          "label": "Customer",
+          "expected": "Acme Robotics",
+          "actual": "Acme Robotics",
+          "passed": true
+        },
+        {
+          "label": "Line items",
+          "expected": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "actual": "[{\"description\":\"Consulting\",\"quantity\":3,\"unitPrice\":250},{\"description\":\"Cloud audit\",\"quantity\":1,\"unitPrice\":500}]",
+          "passed": true
+        },
+        {
+          "label": "Payment terms",
+          "expected": "NET_30",
+          "actual": "NET_30",
+          "passed": true
+        },
+        {
+          "label": "Invoice total",
+          "expected": "$1250.00",
+          "actual": "$1250.00",
+          "passed": true
+        },
+        {
+          "label": "PDF artifact",
+          "expected": "Valid PDF downloaded",
+          "actual": "Valid PDF downloaded",
+          "passed": true
+        }
+      ],
+      "scenarioId": "285cafa1-cf63-43d2-814a-55a8e31fc9fd",
+      "screenshot": "/artifacts/8b215359-f521-4301-bf86-9f9641af5471.png",
+      "pdfUrl": "/artifacts/8b215359-f521-4301-bf86-9f9641af5471.pdf",
+      "finishedAt": "2026-09-30T03:23:39.122Z",
+      "durationMs": 2057
+    }
+  ]
+}

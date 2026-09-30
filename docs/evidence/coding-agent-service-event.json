@@ -1,0 +1,29 @@
+[
+    {
+        "EventId": "abc47b67-c8b1-4502-86f9-d0c831a72c70",
+        "EventTime": "2026-09-29T20:16:39-04:00",
+        "EventName": "CreateService",
+        "Resources": [
+            {
+                "ResourceType": "AWS::AppRunner::AutoScalingConfiguration",
+                "ResourceName": "once-demo-service-v2-single"
+            },
+            {
+                "ResourceType": "AWS::AppRunner::AutoScalingConfiguration",
+                "ResourceName": "arn:aws:apprunner:us-east-1:733366527874:autoscalingconfiguration/once-demo-service-v2-single/1/cec0c235fbf943a29e3e7edc72871ff6"
+            },
+            {
+                "ResourceType": "AWS::AppRunner::Service",
+                "ResourceName": "arn:aws:apprunner:us-east-1:733366527874:service/once-demo-service-v2-once/743b047f746c4f99900c27da95d85ede"
+            },
+            {
+                "ResourceType": "AWS::AppRunner::Service",
+                "ResourceName": "once-demo-service-v2-once"
+            },
+            {
+                "ResourceType": "AWS::IAM::Role",
+                "ResourceName": "arn:aws:iam::733366527874:role/once-demo-service-v2-ImageAccessRole-kXgUWifdDU0W"
+            }
+        ]
+    }
+]

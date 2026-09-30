@@ -3,6 +3,12 @@
 Profile: `codex-login`. Account: `733366527874`. Region: `us-east-1`.
 Authentication was renewed successfully. No AgentCore session was created.
 
+## Linux hosting update
+
+Fresh browser-based Linux `aws login` succeeded and STS confirmed the account. ECR and App Runner worked after correcting the scaling-name length and managed-policy name in the CloudFormation template. The public application is https://tpuqe8scax.us-east-1.awsapprunner.com. Public sample and recorded invoice checks passed using Chromium on the App Runner instance. See [VERIFICATION.md](VERIFICATION.md) for release evidence.
+
+The historical managed-AI restrictions below remain unresolved and were not retried without an account-side change. They do not prevent this release's AWS hosting. No AWS Support case has been submitted.
+
 ## Observed failures
 
 - Bedrock `get-foundation-model-availability` for `amazon.nova-lite-v1:0` returns agreement AVAILABLE, entitlement AVAILABLE, region AVAILABLE, authorization NOT_AUTHORIZED.
@@ -14,7 +20,7 @@ Authentication was renewed successfully. No AgentCore session was created.
 - CodeBuild `StartBuild` for the private image build returned `AccountLimitExceededException: Cannot have more than 0 builds in queue for the account`. The CodeBuild project was created but no build ran.
 - CloudFront distribution creation returned HTTP 403: `Your account must be verified before you can add new CloudFront resources. To verify your account, please contact AWS Support ... and include this error message.` The EC2 and CloudFront stack rolled back; no public URL was produced.
 
-The existing `once-demo-build` CloudFormation stack contains a private source bucket, an empty ECR repository, and a CodeBuild project. The failed `once-demo-web` stack reached `ROLLBACK_COMPLETE`; every resource is `DELETE_COMPLETE`, including the EC2 host. Its failed stack record remains for error evidence. Inspect `once-demo-build` before any cleanup; its private source bucket is retained by policy.
+The existing `once-demo-build` CloudFormation stack contains a private source bucket, the populated private ECR repository, and a CodeBuild project. The failed `once-demo-web` stack reached `ROLLBACK_COMPLETE`; every resource is `DELETE_COMPLETE`, including the EC2 host. Its failed stack record remains for error evidence. Inspect `once-demo-build` before any cleanup; its private source bucket is retained by policy.
 
 ## What to investigate in the AWS account
 

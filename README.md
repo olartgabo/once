@@ -2,16 +2,20 @@
 
 Show it once. Run through change.
 
-Once is a local browser-workflow laboratory. Record an invoice task in the included Northstar CRM, inspect the compiled workflow, and compare execution by recorded selectors with execution by visible roles and supported equivalent labels.
+Once is a browser-workflow laboratory hosted on AWS. Record an invoice task in the included Northstar CRM, inspect the compiled workflow, and compare execution by recorded selectors with execution by visible roles and supported equivalent labels.
 
 The default mode uses a deterministic, invoice-specific compiler and local Playwright. Optional integrations now implement Amazon Bedrock intent enrichment and visible-target selection, plus AgentCore Browser execution with a scoped local fixture bridge. These integrations preserve the recorded action order; they do not train a model or infer a general policy. Live Nova inference is currently blocked: AWS reports `NOT_AUTHORIZED` and `ValidationException: Operation not allowed` for the configured account. See [the recording guide](docs/RECORDING.md) for the demo sequence and AWS launch settings.
 
+Try the [live AWS demo](https://tpuqe8scax.us-east-1.awsapprunner.com), with no app login. The public demo uses synthetic data and ephemeral instance storage.
+
+![Verified invoice run on the public AWS demo](docs/evidence/verified-live-run.png)
+
 ## Run locally
 
-Use a current Node.js LTS release and npm. From the project directory:
+Use Node.js 24 LTS and a compatible npm release. From the project directory:
 
-```powershell
-npm install
+```bash
+npm ci
 npx playwright install chromium
 npm run dev
 ```
@@ -20,13 +24,21 @@ Open http://localhost:5173. Vite serves the interface on port 5173 and proxies A
 
 For a built local preview:
 
-```powershell
+```bash
 npm run build
-$env:ONCE_WEB_ORIGIN = 'http://localhost:3001'
-npm start
+ONCE_WEB_ORIGIN=http://localhost:3001 npm start
 ```
 
-Open http://localhost:3001. To return to the development server in the same PowerShell session, set `$env:ONCE_WEB_ORIGIN = 'http://localhost:5173'` before running `npm run dev`.
+Open http://localhost:3001. The environment assignment above applies only to that process; `npm run dev` uses port 5173 by default. In PowerShell, set `$env:ONCE_WEB_ORIGIN = 'http://localhost:3001'` before `npm start`.
+
+For the Linux production container:
+
+```bash
+docker build -t once:demo .
+docker run --rm -p 127.0.0.1:3001:3001 once:demo
+```
+
+Open http://localhost:3001. On hosts where Docker's default network cannot resolve DNS, build with `docker build --network host -t once:demo .`.
 
 ## Try it
 
@@ -58,6 +70,16 @@ npm run smoke:recording
 
 Initial local verification passed those six sample cases and the recorded Globex case. Successful runs passed all six business checks. These are smoke checks over a small fixed fixture, not a broad reliability benchmark. Re-run them against your environment; the mutation lab can also compare both methods across L0–L4.
 
+Local-container and public AWS verification each covered 30 executions: three seeds, five cumulative levels, and both methods. Semantic binding passed 15/15; literal replay passed 6/15 (L0 and L1 only). See [verification evidence and limits](docs/VERIFICATION.md). Reproduce it against the built server or a public deployment:
+
+```bash
+ONCE_API_ORIGIN=http://localhost:3001 npm run smoke
+ONCE_API_ORIGIN=http://localhost:3001 npm run smoke:recording
+ONCE_API_ORIGIN=http://localhost:3001 npm run benchmark
+```
+
+The recording test uses `ONCE_UI_ORIGIN` if supplied, then `ONCE_API_ORIGIN`, then the development UI on port 5173. The benchmark writes full run evidence and runtime settings to `artifacts/benchmark.json` and spaces runs to respect public-mode limits.
+
 | Level | Cumulative interface changes            |
 | ----- | --------------------------------------- |
 | L0    | Original interface                      |
@@ -72,7 +94,7 @@ The seed controls changed IDs. Theme, layout, and label transformations are fixe
 
 Workflows, scenarios, and run history persist in `.data/store.json`. Browser screenshots and downloaded PDFs live in `.data/artifacts/`. Set `ONCE_DATA_DIR` to use another data directory. Generated data is excluded from Git.
 
-The API binds to loopback by default and supports one browser run at a time. It has no user authentication or multi-tenant isolation. Browser requests are limited to the configured application origin; arbitrary external target URLs are unsupported. Use synthetic data on a trusted local machine. `ONCE_PUBLIC_DEMO=1` enables a bounded public demo mode for deployment, but no public deployment has passed its live check yet. See [deployment status and procedure](docs/DEPLOYMENT.md).
+The API binds to loopback by default and supports one browser run at a time. It has no user authentication or multi-tenant isolation. Browser requests are limited to the configured application origin; arbitrary external target URLs are unsupported. Use synthetic data on a trusted local machine. `ONCE_PUBLIC_DEMO=1` enables a bounded public demo mode for deployment, and is enabled on the verified App Runner deployment. See [deployment status and procedure](docs/DEPLOYMENT.md).
 
 PDF verification checks the downloaded file's PDF header and minimum size, plus the saved invoice's export flag. Business checks compare the persisted invoice's customer, line items, terms, and total. PDF text is not independently parsed.
 
@@ -80,6 +102,8 @@ PDF verification checks the downloaded file's PDF header and minimum size, plus 
 
 Implemented: browser recording, versioned workflows with event provenance, deterministic compilation, local browser execution, selector baseline, visible-role binding, seeded scenarios, independent business checks, real PDF downloads, screenshots, and local run history.
 
-Remaining from the broader brief: successful live AWS integration verification, richer workflow abstraction, additional task families, broader mutation coverage, statistically useful benchmark suites, cloud persistence, and deployment. See [ARCHITECTURE.md](ARCHITECTURE.md) and [DECISIONS.md](DECISIONS.md).
+Remaining from the broader brief: successful live Bedrock/AgentCore integration verification, richer workflow abstraction, additional task families, broader mutation coverage, statistically useful benchmark suites, and cloud persistence. See [ARCHITECTURE.md](ARCHITECTURE.md) and [DECISIONS.md](DECISIONS.md).
 
 Released under the [MIT license](LICENSE).
+
+Submission preparation: [submission project copy](docs/SUBMISSION.md), [verification evidence](docs/VERIFICATION.md), and the [AWS deployment diagram](docs/diagrams/once-deployment.svg). The public HTTPS endpoint runs the same deterministic compiler and Chromium executor.

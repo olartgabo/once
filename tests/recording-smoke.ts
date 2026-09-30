@@ -1,13 +1,19 @@
 import assert from "node:assert/strict";
 import { launchBrowser } from "../server/runner.js";
 import type { Workflow, Run } from "../src/types.js";
+import { apiOrigin, verifyArtifacts, waitForRun } from "./support.js";
+
+const webOrigin =
+  process.env.ONCE_UI_ORIGIN ||
+  process.env.ONCE_API_ORIGIN ||
+  "http://localhost:5173";
 
 const browser = await launchBrowser();
 try {
   const page = await browser.newPage({
     viewport: { width: 1500, height: 1100 },
   });
-  await page.goto("http://localhost:5173");
+  await page.goto(webOrigin);
   await page
     .getByRole("button", { name: "New demonstration", exact: true })
     .click();
@@ -64,7 +70,7 @@ try {
   const workflow = (await response.json()) as Workflow;
   assert.equal(workflow.source, "recorded");
   assert.equal(workflow.inputs.customer, "Globex Research");
-  const started = await fetch("http://localhost:3001/api/runs", {
+  const started = await fetch(`${apiOrigin}/api/runs`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -75,16 +81,11 @@ try {
     }),
   });
   assert.equal(started.status, 202);
-  let run = (await started.json()) as Run;
-  const deadline = Date.now() + 110000;
-  while (run.status === "queued" || run.status === "running") {
-    assert.ok(Date.now() < deadline);
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    run = (await (
-      await fetch(`http://localhost:3001/api/runs/${run.id}`)
-    ).json()) as Run;
-  }
+  const run = await waitForRun((await started.json()) as Run);
   assert.equal(run.status, "passed", run.error);
+  assert.equal(run.checks.length, 6);
+  assert.ok(run.checks.every((check) => check.passed));
+  await verifyArtifacts(run);
   process.stdout.write(
     `Recorded custom workflow: ${workflow.events.length} events → ${workflow.steps.length} steps; Globex $1700 / Net 15; semantic L4: ${run.status}; ${run.checks.filter((check) => check.passed).length}/${run.checks.length} checks\n`,
   );

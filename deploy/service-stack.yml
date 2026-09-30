@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: Once public demo service - a single bounded App Runner instance serving only synthetic workflows.
 Metadata:
   AWSToolsMetrics:
-    AWSAgentToolkit: aws-cloudformation@2
+    AWSAgentToolkit: aws-cloudformation@3
   com.aws.cloudformation.Context:
     ref:
       - docs/DEPLOYMENT.md
@@ -28,11 +28,17 @@ Resources:
               Service: build.apprunner.amazonaws.com
             Action: sts:AssumeRole
       ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/service-role/AmazonAppRunnerServicePolicyForECRAccess
+        - arn:aws:iam::aws:policy/service-role/AWSAppRunnerServicePolicyForECRAccess
   DemoScaling:
     Type: AWS::AppRunner::AutoScalingConfiguration
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Keeps ephemeral demo history and run admission in a single application process.
+        must:
+          - Keep MaxSize at one until storage and run admission are shared.
+          - The generated scaling configuration name must fit the 32-character limit.
     Properties:
-      AutoScalingConfigurationName: !Sub "${AWS::StackName}-single-instance"
+      AutoScalingConfigurationName: !Sub "${AWS::StackName}-single"
       MaxConcurrency: 25
       MaxSize: 1
       MinSize: 1

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#547965"/></marker></defs>
+<rect width="1600" height="900" fill="#fff"/>
+<g font-family="sans-serif" fill="#173d35">
+<text x="40" y="65" font-size="34" font-weight="700">Once - public AWS deployment path</text>
+<text x="40" y="118" font-size="21">Verified public HTTPS app: Chromium workflows, business checks, PNGs and PDFs.</text>
+<rect x="420" y="155" width="1110" height="635" rx="18" fill="#f8fbf8" stroke="#91ad9d" stroke-width="2"/>
+<text x="450" y="190" font-size="24" font-weight="700">Single AWS App Runner instance</text>
+<path d="M340,245 L470,245" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="385" y="229" font-size="17">HTTPS</text>
+<path d="M340,445 L420,445" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="345" y="430" font-size="17">Image</text>
+<path d="M340,645 L375,645 L375,355 L1255,355 L1255,330" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="380" y="613" font-size="17">IaC</text>
+<path d="M900,270 L1030,270" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="910" y="252" font-size="17">Trace / run</text>
+<path d="M1140,330 L1140,380 L685,380 L685,430" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="785" y="370" font-size="17">Actions</text>
+<path d="M540,430 L540,330" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="555" y="395" font-size="17">Loopback</text>
+<path d="M1255,330 L1255,430" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1270" y="390" font-size="17">Checks</text>
+<path d="M1255,540 L1255,640" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1270" y="595" font-size="17">State</text>
+<path d="M900,485 L965,485 L965,695 L1030,695" fill="none" stroke="#547965" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="908" y="575" font-size="17">Artifacts</text>
+<rect x="40" y="190" width="300" height="110" rx="12" fill="#e6f0eb" stroke="#83958c"/>
+<text x="58" y="223" font-size="23" font-weight="700">Judge browser</text>
+<text x="58" y="251" font-size="15">Fresh session; no app login</text>
+<text x="58" y="276" font-size="15">Recording, comparisons, evidence</text>
+<rect x="40" y="390" width="300" height="110" rx="12" fill="#fff0d9" stroke="#83958c"/>
+<text x="58" y="423" font-size="23" font-weight="700">Amazon ECR</text>
+<text x="58" y="451" font-size="15">Private, versioned container image</text>
+<text x="58" y="476" font-size="15">Pinned Playwright + bundled Chromium</text>
+<rect x="40" y="590" width="300" height="110" rx="12" fill="#fff0d9" stroke="#83958c"/>
+<text x="58" y="623" font-size="23" font-weight="700">CloudFormation</text>
+<text x="58" y="651" font-size="15">ECR image access role</text>
+<text x="58" y="676" font-size="15">One instance; public demo caps</text>
+<rect x="470" y="220" width="430" height="110" rx="12" fill="#e6f0eb" stroke="#83958c"/>
+<text x="488" y="253" font-size="23" font-weight="700">React + Northstar</text>
+<text x="488" y="281" font-size="15">Dashboard and synthetic invoice fixture</text>
+<text x="488" y="306" font-size="15">Same task; cumulative L0-L4 mutations</text>
+<rect x="1030" y="220" width="450" height="110" rx="12" fill="#e6f0eb" stroke="#83958c"/>
+<text x="1048" y="253" font-size="23" font-weight="700">Express + compiler</text>
+<text x="1048" y="281" font-size="15">Trace provenance; ordered workflow steps</text>
+<text x="1048" y="306" font-size="15">One active browser run at a time</text>
+<rect x="470" y="430" width="430" height="110" rx="12" fill="#e6f0eb" stroke="#83958c"/>
+<text x="488" y="463" font-size="23" font-weight="700">Playwright Chromium</text>
+<text x="488" y="491" font-size="15">Visible roles or recorded selectors</text>
+<text x="488" y="516" font-size="15">Loopback requests to Northstar only</text>
+<rect x="1030" y="430" width="450" height="110" rx="12" fill="#e6f0eb" stroke="#83958c"/>
+<text x="1048" y="463" font-size="23" font-weight="700">Independent verifier</text>
+<text x="1048" y="491" font-size="15">Invoice state; customer, items, terms, total</text>
+<text x="1048" y="516" font-size="15">PDF signature, size, and export state</text>
+<rect x="1030" y="640" width="450" height="110" rx="12" fill="#e6f0eb" stroke="#83958c"/>
+<text x="1048" y="673" font-size="23" font-weight="700">Instance evidence</text>
+<text x="1048" y="701" font-size="15">Serialized JSON; PNGs and downloaded PDFs</text>
+<text x="1048" y="726" font-size="15">Ephemeral when the instance is replaced</text>
+<rect x="470" y="640" width="430" height="110" rx="12" fill="#f2f2f4" stroke="#83958c"/>
+<text x="488" y="673" font-size="23" font-weight="700">Optional adapters - disabled</text>
+<text x="488" y="701" font-size="15">Bedrock and AgentCore live integration is unverified</text>
+<text x="488" y="726" font-size="15">Local semantic binding uses predefined equivalent labels</text>
+<text x="40" y="849" font-size="20">Hosted Playwright execution is distinct from managed AWS AI integration. Evidence storage is ephemeral.</text>
+</g></svg>

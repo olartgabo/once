@@ -13,7 +13,9 @@
     "smoke": "tsx tests/smoke.ts",
     "smoke:recording": "tsx tests/recording-smoke.ts",
     "start": "tsx server/index.ts",
-    "format": "prettier --write src server tests *.json *.md index.html"
+    "format": "prettier --write src server tests *.json *.md index.html",
+    "benchmark": "tsx tests/benchmark.ts",
+    "record:demo": "tsx tests/demo-recording.ts"
   },
   "dependencies": {
     "@aws-crypto/sha256-js": "^5.2.0",
@@ -28,6 +30,7 @@
     "playwright": "^1.55.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "tsx": "^4.23.15",
     "zod": "^3.24.2"
   },
   "devDependencies": {
@@ -39,9 +42,8 @@
     "@vitejs/plugin-react": "^4.7.0",
     "concurrently": "^9.2.1",
     "prettier": "^3.6.2",
-    "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "vite": "^6.3.5",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.11"
   }
 }

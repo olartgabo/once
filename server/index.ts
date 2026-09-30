@@ -61,6 +61,7 @@ function atCapacity(
 }
 app.get("/api/health", (_req, res) =>
   res.json({
+    publicDemo,
     browser: process.env.ONCE_BROWSER === "agentcore" ? "agentcore" : "local",
     cloud: process.env.ONCE_BROWSER === "agentcore",
     compiler:

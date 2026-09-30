@@ -2,11 +2,41 @@
 
 Once contains a React interface, a synthetic CRM, an Express control plane, and a local Playwright executor. The executor performs browser actions. A separate verifier inspects saved business state after execution.
 
+## Public deployment path
+
+The release container runs those same components together in one AWS App Runner instance, using a private ECR image and a CloudFormation-managed ECR access role. The application receives no AWS API role. Browser actions target the container's own loopback Northstar origin, while judges access the application over App Runner HTTPS. The deterministic compiler and local browser executor remain distinct from the optional managed AI adapters.
+
+```mermaid
+flowchart LR
+    Judge[Fresh judge browser] -->|Public HTTPS| AppRunner
+    ECR[Private Amazon ECR image] -->|Image pull role| AppRunner
+    CF[CloudFormation] -->|Manages service and role| AppRunner
+    subgraph AppRunner[Single App Runner instance]
+        UI[React dashboard and Northstar]
+        API[Express control plane]
+        Compiler[Deterministic trace compiler]
+        Browser[Playwright Chromium]
+        Verify[Business verifier]
+        Store[Ephemeral JSON and artifacts]
+        UI --> API
+        API --> Compiler
+        API --> Browser
+        Browser -->|Loopback UI actions| UI
+        API --> Verify
+        Verify --> Store
+        Browser -->|PNGs and downloaded PDFs| Store
+    end
+```
+
+This is the deployed and publicly verified path. The [deployment diagram](docs/diagrams/once-deployment.svg) and its editable draw.io source distinguish this hosting path from the optional adapters. See [deployment status](docs/DEPLOYMENT.md).
+
+`ONCE_PUBLIC_DEMO=1` bounds POST traffic, workflows, scenarios, and runs. The instance count remains one because JSON persistence and run admission are process-local. History is ephemeral across instance replacement. The demo uses synthetic data and has no user accounts or tenancy isolation.
+
 ## Optional AWS execution
 
 `server/bedrock.ts` uses Converse to enrich validated recorded steps with business intents and resolve each semantic action against the current visible accessible controls. Model output cannot change recorded values, action order, or provenance. Exact role/name selections must occur uniquely in the observed candidate list. Model calls have bounded output tokens and a 40-second timeout. This code is tested at its validation boundaries; live Nova inference is blocked by account authorization as of September 29, 2026.
 
-`server/browser-agentcore.ts` starts a five-minute managed Browser session, signs its CDP connection, uses its default browser context, and attempts session cleanup in all exit paths. The remote browser receives the local Northstar fixture through an intercepted, allowlisted synthetic origin. Only built assets and the current scenario's business endpoints are forwarded. Workflow and run control endpoints are excluded. Both literal and semantic modes use the same browser adapter. The control plane and artifacts remain local; this is not a public AWS deployment.
+`server/browser-agentcore.ts` starts a five-minute managed Browser session, signs its CDP connection, uses its default browser context, and attempts session cleanup in all exit paths. The remote browser receives the local Northstar fixture through an intercepted, allowlisted synthetic origin. Only built assets and the current scenario's business endpoints are forwarded. Workflow and run control endpoints are excluded. Both literal and semantic modes use the same browser adapter. In developer-mode AgentCore experiments, the control plane and artifacts remain on the developer host. This optional execution path is separate from the deployed App Runner hosting path.
 
 ## Components
 
@@ -42,7 +72,7 @@ State is held in memory and persisted to `.data/store.json` through serialized w
 
 ## Execution boundary
 
-The browser navigates only to `ONCE_WEB_ORIGIN` and blocks network requests to other origins. The API binds to `127.0.0.1`, validates supported inputs, and rejects cross-origin writes from unrecognized browser origins. There is no authentication layer.
+The browser navigates only to `ONCE_WEB_ORIGIN` and blocks network requests to other origins. The development API binds to `127.0.0.1`; the production container binds to `0.0.0.0`. The API validates supported inputs, and rejects cross-origin writes from unrecognized browser origins. There is no authentication layer.
 
 The executor uses browser locators and does not call verifier internals or inspect scenario invoice data to choose actions. The verifier is ordinary server code and has no browser-accessible evaluation endpoint. The synthetic app's own data API still exists to render its UI; this local arrangement is not adversarial isolation against a malicious browser agent.
 
@@ -58,4 +88,4 @@ The checked-in smoke experiments cover L0, L2, and L4 plus a newly recorded invo
 
 The optional Bedrock and AgentCore adapters are implemented, but have not completed a live end-to-end run. The configured AWS account returned `NOT_AUTHORIZED` for Nova Lite and an applied AgentCore Browser session quota of zero on September 29, 2026. Validation tests establish only local code behavior at the model-output and fixture-bridge boundaries. They do not establish that the managed services can run this workflow.
 
-The AgentCore browser accesses the current Northstar scenario through a scoped local fixture bridge. The bridge serves the built application and permitted scenario endpoints at a synthetic origin; it excludes workflow and run control APIs. The Express control plane, JSON state, and artifacts stay on the developer's machine. A public deployment needs separate infrastructure, identity and access controls, persistent storage, and live cloud verification. The current loopback server is not a public hosting configuration.
+The AgentCore browser accesses the current Northstar scenario through a scoped local fixture bridge. The bridge serves the built application and permitted scenario endpoints at a synthetic origin; it excludes workflow and run control APIs. The Express control plane, JSON state, and artifacts stay on the developer's machine. The released public demo uses the App Runner configuration above, without these optional adapters. Durable storage and user isolation remain future production work.

@@ -1,0 +1,18 @@
+{
+    "imageScanFindings": {
+        "findings": [],
+        "imageScanCompletedAt": "2026-09-29T23:14:06-04:00",
+        "vulnerabilitySourceUpdatedAt": "2026-09-29T23:14:06-04:00",
+        "findingSeverityCounts": {}
+    },
+    "registryId": "733366527874",
+    "repositoryName": "once-demo-build-imagerepository-0s79nc7bfwac",
+    "imageId": {
+        "imageDigest": "sha256:51eb09f39be0a1075522ba88eb0fc9c1fca4931d45628a0c75eb3e4b22e2c159",
+        "imageTag": "demo-20260930-linux-4"
+    },
+    "imageScanStatus": {
+        "status": "COMPLETE",
+        "description": "The scan was completed successfully."
+    }
+}

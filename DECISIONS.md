@@ -2,7 +2,7 @@
 
 ## Keep the control plane local during development
 
-React/Vite, Express, and Playwright make the full recording-to-verification loop runnable without cloud credentials. Optional Bedrock and AgentCore adapters now exist behind environment flags. The local path has completed end-to-end smoke runs; the AWS path has not, because account authorization and browser-session quota blocked live calls. Keeping the control plane on loopback also avoids exposing its unauthenticated run and artifact APIs.
+React/Vite, Express, and Playwright make the full recording-to-verification loop runnable without cloud credentials. Optional Bedrock and AgentCore adapters now exist behind environment flags. The local path has completed end-to-end smoke runs; the optional managed-model/browser path has not, because account authorization and browser-session quota blocked live calls. Keeping the control plane on loopback also avoids exposing its unauthenticated run and artifact APIs.
 
 ## Use one synthetic task family
 
@@ -34,8 +34,12 @@ A successful demonstration may leave quantity or payment terms unchanged. Captur
 
 ## Add AWS adapters behind explicit flags
 
-Bedrock Converse can enrich existing step intents and select observed controls without changing recorded values or action order. AgentCore Browser can replace the local browser session while a restricted fixture bridge serves the current scenario. Both modes share the verifier. These design choices make the integration testable without claiming a successful cloud run. The current account is blocked from Nova Lite inference and AgentCore Browser sessions; no public AWS deployment exists.
+Bedrock Converse can enrich existing step intents and select observed controls without changing recorded values or action order. AgentCore Browser can replace the local browser session while a restricted fixture bridge serves the current scenario. Both modes share the verifier. These design choices make the integration testable without claiming a successful cloud run. The current account is blocked from Nova Lite inference and AgentCore Browser sessions; the public release instead hosts the proven Playwright path on AWS App Runner.
 
 ## Preserve the original brief as a target
 
-The project name is Once. The implemented local prototype covers the core invoice experiment. Remaining work includes live AWS execution and verification, richer semantic workflow abstraction and recovery, additional workflows, a larger benchmark, and deployment. No cloud completion or general-purpose learning claim is made.
+The project name is Once. The implemented local prototype covers the core invoice experiment. Remaining work includes live managed Bedrock/AgentCore execution and verification, richer semantic workflow abstraction and recovery, additional workflows, a larger benchmark, and durable cloud persistence. The release demonstrates AWS hosting; no managed AI completion or general-purpose learning claim is made.
+
+## Host the verified browser path on App Runner
+
+Build Chromium locally on Linux and push the immutable image to ECR. CloudFormation manages one App Runner instance and the ECR pull role. This avoids the account restrictions affecting CodeBuild and CloudFront. Public mode bounds requests and stored records; synthetic state is ephemeral and shared. The working hosted path does not depend on the blocked managed AI services.
